@@ -101,7 +101,7 @@ export default function FormationPage() {
     navigate("/tiktokformation"); // Redirige vers /tiktokformations lorsque la première carte est cliquée
   };
   const handleClickSecondCard = () => {
-    navigate("/ia"); // Redirige vers /tiktokformations lorsque la première carte est cliquée
+    navigate("/LienIa"); // Redirige vers /tiktokformations lorsque la première carte est cliquée
   };
 
   return (

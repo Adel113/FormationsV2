@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Formation from './pages/Formation';
 import TiktokFormation from './pages/TiktokFormation';
-import Ia from './pages/ia';
+import LienIa from './pages/LienIa';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import { AuthProvider } from './contexts/AuthContext';
@@ -42,9 +42,9 @@ function AppRoutes() {
               </PrivateRoute>
             } 
           />
-          <Route path="/ia" element={
+          <Route path="/LienIa" element={
             <PrivateRoute>
-              <Ia />
+              <LienIa />
             </PrivateRoute>
           }/>
           <Route path="/formation" element={
