@@ -100,45 +100,43 @@ export default function TiktokFormation() {
       </section>
 
       {/*Création de compte */}
-      <section className="bg-white py-20">
+      <section className="py-20">
         <div className="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
-
-        <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">
-                <img className="object-cover object-center rounded" alt="hero" src={CompteImage} />
+          
+            {/* Contenu texte */}
+            <div className="lg:flex-grow mt-5 md:mt-0 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+              <h1 className="text-4xl font-extrabold leading-9 tracking-tight mb-3 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+                Étape 1 : Créer un compte TikTok
+              </h1>
+              
+              <ul>
+                <li className="flex items-center text-xl mb-4">
+                  <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
+                  <span className="text-xl">Utilisez une nouvelle adresse email professionnelle.</span>
+                </li>
+                <li className="flex items-center text-xl mb-4">
+                  <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
+                  <span className="text-xl">Photo de profil attrayante et biographie claire et engageante.</span>
+                </li>
+                <li className="flex items-center text-xl mb-4">
+                  <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
+                  <span className="text-xl">Utilisez des mots-clés pertinents dans votre nom d'utilisateur.</span>
+                </li>
+                <li className="flex items-center text-xl mb-4">
+                  <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
+                  <span className="text-xl">Assurez-vous que votre contenu est cohérent avec votre niche.</span>
+                </li>
+              </ul>
             </div>
-            <div
-                className="lg:flex-grow mt-5 md:mt-0 md:w-1.5/2 lg:pl-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1
-                    className="text-4xl font-extrabold leading-9 tracking-tight mb-3 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
-                    Étape 1 : Créer un compte TikTok
-                </h1>
-                <ul>
-                <li className="flex items-center text-xl">
-                    <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
-                    <span>Utilisez une nouvelle adresse email professionnelle.</span>
-                  </li>
-                  <li className="flex items-center text-xl">
-                    <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
-                    <span>Photo de profil attrayante et biographie claire et engageante.</span>
-                  </li>
-                  <li className="flex items-center text-xl">
-                    <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
-                    <span>Utilisez des mots-clés pertinents dans votre nom d'utilisateur.</span>
-                  </li>
-                  <li className="flex items-center text-xl">
-                    <CheckCheckIcon className="h-6 w-6 text-pink-600 mr-2" />
-                    <span>Assurez-vous que votre contenu est cohérent avec votre niche.</span>
-                  </li> 
-                </ul>
-                
-                <div className="flex justify-center">
-                  
 
-                </div>
+            {/* Image */}
+            <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">
+              <img className="object-cover object-center rounded" alt="hero" src={CompteImage} />
             </div>
-            
-        </div>
-      </section>
+
+          </div>
+        </section>
+
 
 
 

@@ -12,13 +12,14 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
   return (
     <div className="space-y-4"> {/* Conteneur principal avec espacement vertical entre les éléments */}
-      <div className="grid grid-cols-2 gap-4"> {/* Grille avec 2 colonnes et un espace entre les éléments */}
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 "> {/* Grille avec 2 colonnes et un espace entre les éléments */}
         {images.map((src, index) => (
           <img
             key={index} // Clé unique pour chaque élément de la liste
             className="object-cover object-center rounded cursor-pointer transition-transform duration-300 hover:scale-105" // Classes CSS pour le style
             alt={`Image ${index + 1}`} // Texte alternatif pour l'image
             src={src} // Source de l'image
+            
             onClick={() => setSelectedImage(src)} // Définir l'image sélectionnée lors du clic
           />
         ))}

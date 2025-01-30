@@ -32,7 +32,7 @@ function AppRoutes() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow xs:m-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
