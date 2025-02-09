@@ -15,7 +15,7 @@ export default function Navbar() {
         <nav className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <TrendingUp className="h-6 w-6 text-pink-600" />
-            <span className="text-xl font-bold">TikTok Pro</span>
+            <span className="text-xl font-bold">FormationV2Pro</span>
           </Link>
 
           {/* Menu Hamburger pour mobile */}
@@ -28,6 +28,7 @@ export default function Navbar() {
           {/* Liens de navigation pour grands écrans */}
           <div className="hidden lg:flex items-center space-x-6">
             <Link to="/" className="hover:text-pink-600">Accueil</Link>
+            <Link to="/apropos" className='hover:text-pink-600'>A propos</Link>
             {user ? (
               <>
                 <Link to="/formation" className="hover:text-pink-600">Formation</Link>
@@ -39,6 +40,7 @@ export default function Navbar() {
               </>
             ) : (
               <Link to="/login" className="hover:text-pink-600">Connexion</Link>
+
             )}
           </div>
         </nav>
@@ -50,6 +52,7 @@ export default function Navbar() {
               <Link to="/" className="hover:text-pink-600" onClick={toggleMenu}>Accueil</Link>
               {user ? (
                 <>
+                  <Link to="/apropos" className='hover:text-pink-600'>A propos</Link>
                   <Link to="/formation" className="hover:text-pink-600" onClick={toggleMenu}>Formation</Link>
                   <Link to="/contact" className="hover:text-pink-600" onClick={toggleMenu}>Contact</Link>
                   <button onClick={() => { logout(); toggleMenu(); }} className="flex items-center space-x-2 hover:text-pink-600">

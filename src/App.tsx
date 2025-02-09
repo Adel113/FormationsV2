@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Formation from './pages/Formation';
-import TiktokFormation from './pages/TiktokFormation';
-import LienIa from './pages/LienIa';
-import Contact from './pages/Contact';
-import Login from './pages/Login';
+import Home from './pages/principal/Home';
+import Formation from './pages/principal/Formation';
+import TiktokFormation from './pages/formations/TiktokFormation';
+import LienIa from './pages/formations/LienIa';
+import Contact from './pages/principal/Contact';
+import Apropos from './pages/principal/apropos';
+import Login from './pages/principal/Login';
 import { AuthProvider } from './contexts/AuthContext';
 import { useAuth } from './contexts/AuthContext';
 
@@ -53,6 +54,7 @@ function AppRoutes() {
               </PrivateRoute>
             }
           />
+          <Route path="/apropos" element={<Apropos />} />
           <Route path="/contact" element={
               <PrivateRoute>
                 <Contact />

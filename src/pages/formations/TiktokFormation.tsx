@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Video, Target, Clock, ChevronDown, Youtube, Download, PlaySquare, Mic, Film, Subtitles, Eye, CheckCheckIcon, UserPlus, DollarSign } from 'lucide-react';
-import InspirationImage from '../images/inspiration.png';
-import CuriositeImage from '../images/curiosite.png';
-import ChoqueImage from '../images/choque.png';
-import ObjectifImage from '../images/objectif.png';
-import CompteImage from '../images/sidentifier.png';
-import ImageGallery from '../components/ImageGallery';
-import t1 from '../images/t1.png'; 
-import t2 from '../images/t2.png';
-import t3 from '../images/t3.png';
-import t4 from '../images/t4.png';
-import chatgpt1 from '../images/chatgpt1.png';
-import chatgpt2 from '../images/chatgpt2.png';
-import eleven from '../images/eleven.png';
+import InspirationImage from '../../images/inspiration.png';
+import CuriositeImage from '../../images/curiosite.png';
+import ChoqueImage from '../../images/choque.png';
+import ObjectifImage from '../../images/objectif.png';
+import CompteImage from '../../images/sidentifier.png';
+import ImageGallery from '../../components/ImageGallery';
+import t1 from '../../images/t1.png'; 
+import t2 from '../../images/t2.png';
+import t3 from '../../images/t3.png';
+import t4 from '../../images/t4.png';
+import chatgpt1 from '../../images/chatgpt1.png';
+import chatgpt2 from '../../images/chatgpt2.png';
+import eleven from '../../images/eleven.png';
 
 
 export default function TiktokFormation() {
