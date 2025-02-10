@@ -13,14 +13,35 @@ export default function apropos() {
         </div>
       </div>
 
-      {/* Content Section */}
-      <section className="py-20 container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">Notre Histoire</h2>
-        <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-          Fondée par des experts passionnés, notre plateforme a été créée pour offrir un accès facile et efficace à l’apprentissage en ligne.
-          Nous nous engageons à fournir des formations actualisées et pertinentes pour permettre à chacun de se développer professionnellement.
+      {/* Story Section */}
+      <section>
+      <div className="min-h-screen  flex flex-col items-center p-6">
+      <div className="max-w-4xl w-full bg-white shadow-lg rounded-2xl p-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-10 transform rotate-6 scale-150"></div>
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-4 relative z-10">Notre Histoire</h1>
+        <p className="text-gray-600 text-lg text-center mb-6 relative z-10">
+          Découvrez comment notre entreprise a vu le jour et évolué au fil des années.
         </p>
+        <div className="relative z-10 flex flex-col items-center">
+          <div className="absolute left-1/2 w-1 bg-blue-500 h-full transform -translate-x-1/2 rounded-full"></div>
+          {[
+            { title: "Les Débuts", text: "Tout a commencé en 2010, dans un petit garage avec une grande idée : révolutionner notre secteur." },
+            { title: "La Croissance", text: "Grâce à notre équipe passionnée et à nos clients fidèles, nous avons connu une croissance fulgurante." },
+            { title: "Aujourd’hui", text: "Aujourd’hui, nous sommes une référence dans notre domaine, avec une mission toujours intacte : innover et satisfaire nos clients." }
+          ].map((section, index) => (
+            <div key={index} className={`relative flex items-center w-full mb-6 ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}>
+              <div className="w-6 h-6 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2"></div>
+              <div className="w-5/12 p-4 bg-gray-50 rounded-lg shadow hover:bg-blue-100 transition-all duration-300">
+                <h2 className="text-xl font-semibold text-gray-700">{section.title}</h2>
+                <p className="text-gray-600 mt-2">{section.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
       </section>
+
 
       {/* Values Section */}
       <section className="py-20 bg-gray-100 text-center">
@@ -50,6 +71,8 @@ export default function apropos() {
           Explorer les Formations
         </button>
       </section>
+
+      
     </div>
   );
 }
