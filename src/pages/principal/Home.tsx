@@ -1,139 +1,157 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, Users, DollarSign, Star } from 'lucide-react';
+import { BookOpen, Users, DollarSign } from 'lucide-react';
 import LogoApp from '../../images/logoApp.png';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import image1 from '../../images/ia.png';
+import imageAccueil from '../../images/AdobeStock_965828195_Preview.jpeg';
 
 export default function Home() {
   const navigate = useNavigate();
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 400,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-pink-100">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-black to-gray-900 text-white py-24 text-center">
-        <div className="container mx-auto px-6">
-          <img className="w-auto h-auto mx-auto mb-6" src={LogoApp} alt="Platform Logo" />
-          <h1 className="text-5xl font-extrabold mb-4">Découvrez Nos Formations Professionnelles</h1>
-          <p className="text-xl opacity-80 mb-8">
-            Accédez à une variété de formations pour maîtriser les compétences essentielles et booster votre carrière.
+    <div className="min-h-screen bg-gradient-to-br from-stone-900 via-black to-stone-900 text-amber-50">
+
+      {/* 🔹 Hero Section */}
+      <div className="relative bg-cover bg-center text-white py-32 text-center" style={{ backgroundImage: `url(${imageAccueil})` }}>
+        <div className="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-xl"></div>
+        <div className="relative container mx-auto px-6 py-12 rounded-lg">
+          <img className="w-auto h-32 mx-auto mb-6 animate-float" src={LogoApp} alt="Platform Logo" />
+          <h1 className="text-6xl font-bold mb-4 bg-clip-text bg-gradient-to-r from-coral-400 to-orange-400 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+            L'Éducation Redéfinie
+          </h1>
+          <p className="text-xl opacity-90 mb-8 font-light max-w-2xl mx-auto">
+            Plongez dans l'apprentissage du futur avec nos programmes immersifs et évolutifs
           </p>
           <button 
             onClick={() => navigate('/formations')}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-full font-semibold transition-all"
+            className="bg-gradient-to-r from-coral-500 to-orange-500 hover:from-orange-500 hover:to-coral-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-orange-500/40 hover:scale-105 duration-300 group"
           >
             Explorer les Formations
+            <span className="ml-2 inline-block group-hover:translate-x-2 transition-transform">→</span>
           </button>
         </div>
       </div>
 
-      {/* Features Section */}
-      <section className="py-20 container mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
-        <div className="bg-white p-8 rounded-xl shadow-md">
-          <BookOpen className="h-14 w-14 mx-auto mb-4 text-purple-600" />
-          <h3 className="font-semibold text-2xl mb-2">Cours Complets</h3>
-          <p className="text-gray-600">Apprenez à votre rythme avec des modules détaillés.</p>
-        </div>
-        <div className="bg-white p-8 rounded-xl shadow-md">
-          <Users className="h-14 w-14 mx-auto mb-4 text-purple-600" />
-          <h3 className="font-semibold text-2xl mb-2">Communauté Active</h3>
-          <p className="text-gray-600">Échangez et collaborez avec d'autres apprenants.</p>
-        </div>
-        <div className="bg-white p-8 rounded-xl shadow-md">
-          <DollarSign className="h-14 w-14 mx-auto mb-4 text-purple-600" />
-          <h3 className="font-semibold text-2xl mb-2">Opportunités de Carrière</h3>
-          <p className="text-gray-600">Mettez en pratique vos acquis et avancez professionnellement.</p>
-        </div>
+      
+
+      
+
+      {/* 🔹 Features Section */}
+      <section className="py-20 container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+        {[{
+          icon: <BookOpen className="h-16 w-16 mx-auto mb-4 text-coral-400" />,
+          title: "Contenu Premium",
+          description: "Modules créés par des experts du secteur"
+        }, {
+          icon: <Users className="h-16 w-16 mx-auto mb-4 text-orange-300" />,
+          title: "Réseau Global",
+          description: "Connectez-vous avec des passionnés mondiaux"
+        }, {
+          icon: <DollarSign className="h-16 w-16 mx-auto mb-4 text-amber-400" />,
+          title: "Carrière Boostée",
+          description: "Accélérez votre progression professionnelle"
+        }].map((feature, index) => (
+          <div key={index} className="bg-stone-800/40 p-8 rounded-2xl shadow-xl hover:shadow-orange-500/20 transition-all transform hover:scale-[1.02] border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm">
+            {feature.icon}
+            <h3 className="font-semibold text-2xl mb-2 text-amber-100">{feature.title}</h3>
+            <p className="text-amber-100/70">{feature.description}</p>
+          </div>
+        ))}
       </section>
 
-      {/* Timeline Section */}
-      <section className="bg-gray-100 flex justify-center items-center ">
-        <ol className="relative py-20 border-s-2  border-gray-200 dark:border-gray-700">                  
-            <li className="mb-10 ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-dark">Achetez votre accès prenium !</h3>
-                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-700">Accédez dès maintenant à nos formations exclusives et maîtrisez le Community Management, la Crypto et le Dropshipping pour propulser votre succès en ligne ! 🚀🔥</p>
-                <a href="/formations" className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-[#DB2777] border border-[#DB2777] rounded-lg hover:bg-[#be1e65] hover:border-[#be1e65] focus:z-10 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-[#DB2777] dark:text-white dark:border-[#DB2777] dark:hover:bg-[#be1e65] dark:focus:ring-pink-800">Explorez les formations<svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-          </svg></a>
-            </li>
-            <li className="mb-10 ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-dark">Formez-vous !</h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-700">Formez-vous sur le Community Management, la Crypto et le Dropshipping pour bâtir votre succès en ligne ! 🚀📈</p>
-            </li>
-            <li className="ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-dark">Boostez-votre carrière !</h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-700">Boostez votre carrière et atteignez vos objectifs avec le 100% digital : 1 vision, 2 stratégies, 3 fois plus d’opportunités ! 🚀</p>
-            </li>
-        </ol>
-      </section>
+      {/* 🔹 Timeline Section */}
+      <section className="min-h-screen flex flex-col items-center">
+        <div className="max-w-7xl w-full rounded-2xl p-6 relative overflow-hidden">
+          <h1 className="text-6xl font-bold text-center mb-4 bg-gradient-to-r from-coral-400 to-orange-400 bg-clip-text">
+            Notre Approche Innovante 🌟
+          </h1>
+          <p className="text-4xl text-amber-100/80 text-center mb-6 max-w-2xl mx-auto">
+            Un parcours pédagogique conçu pour maximiser votre potentiel créatif
+          </p>
+          <div className="relative z-10 flex flex-col items-center">
+            <div className="absolute left-1/2 w-1 bg-gradient-to-b from-coral-500/80 to-orange-500/80 h-full transform -translate-x-1/2 rounded-full"></div>
 
+            {[{
+              title: "Immersion Digitale",
+              text: "Plongez dans des environnements d'apprentissage interactifs",
+              color: "bg-stone-800/60 backdrop-blur-sm"
+            }, {
+              title: "Expérience Collaborative",
+              text: "Travaillez en synergie avec une communauté mondiale",
+              color: "bg-amber-900/40 backdrop-blur-sm"
+            }, {
+              title: "Maîtrise Concrète",
+              text: "Appliquez vos connaissances sur des projets réels",
+              color: "bg-coral-900/40 backdrop-blur-sm"
+            }].map((section, index) => (
+              <div
+                key={index}
+                className={`relative flex items-center w-full mb-6 ${
+                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                }`}
+              >
+                <div className="w-10 h-10 bg-gradient-to-r from-coral-500 to-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-20 shadow-xl border-2 border-amber-200/20"></div>
 
-
-      {/* Testimonials Section */}
-      <section className="py-20 container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-10">Ce Que Disent Nos Étudiants</h2>
-        <div className="grid md:grid-cols-3 gap-10">
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <Star className="h-14 w-14 mx-auto mb-4 text-yellow-400" />
-            <p className="text-gray-600 mb-4">"Les formations sont très complètes et les instructeurs sont très compétents."</p>
-            <h4 className="font-semibold text-xl">Jean Dupont</h4>
-          </div>
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <Star className="h-14 w-14 mx-auto mb-4 text-yellow-400" />
-            <p className="text-gray-600 mb-4">"J'ai pu décrocher un nouveau poste grâce à ces formations. Je recommande !"</p>
-            <h4 className="font-semibold text-xl">Marie Curie</h4>
-          </div>
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <Star className="h-14 w-14 mx-auto mb-4 text-yellow-400" />
-            <p className="text-gray-600 mb-4">"La communauté est très active et les supports de cours sont excellents."</p>
-            <h4 className="font-semibold text-xl">Pierre Durand</h4>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-20 bg-white text-center">
-        <div className="container mx-auto px-6 grid md:grid-cols-3 gap-10">
-          <div>
-            <h3 className="text-5xl font-bold mb-2">10K+</h3>
-            <p className="text-xl opacity-80">Étudiants Satisfaits</p>
-          </div>
-          <div>
-            <h3 className="text-5xl font-bold mb-2">500+</h3>
-            <p className="text-xl opacity-80">Cours Disponibles</p>
-          </div>
-          <div>
-            <h3 className="text-5xl font-bold mb-2">95%</h3>
-            <p className="text-xl opacity-80">Taux de Réussite</p>
+                <div
+                  className={`w-5/12 p-6 rounded-xl shadow-lg hover:bg-gradient-to-r transition-all duration-300 ${section.color} ${
+                    index % 2 === 0 ? "ml-16" : "mr-16"
+                  } hover:border border-amber-500/30`}
+                >
+                  <h2 className="text-6xl font-semibold text-amber-100">{section.title}</h2>
+                  <p className="text-4xl text-amber-100/70 mt-2">{section.text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-gray-100  py-20 text-center">
-        <h2 className="text-4xl font-bold mb-6">Rejoignez Nos Formations Dès Aujourd’hui</h2>
-        <button 
-          onClick={() => navigate('/formations')}
-          className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-full font-semibold transition-all"
-        >
-          Commencer Maintenant
-        </button>
+
+      {/* 🔹 Statistics Section */}
+      <section className="py-20 bg-orange-400">
+        <div className="container mx-auto px-6 text-center">
+          <div className="max-w-4xl mx-auto mb-12">
+        <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 bg-gradient-to-r from-coral-400 to-orange-400 bg-clip-text">
+          Découvrez les résultats de nos apprenants et les avantages
+        </h2>
+          </div>
+        </div>
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[{
+        value: "15K+",
+        label: "Apprenants Actifs"
+          }, {
+        value: "98%",
+        label: "Satisfaction"
+          }, {
+        value: "1K+",
+        label: "Projets Réalisés"
+          }].map((stat, index) => (
+        <div key={index} className="bg-stone-800/30 p-8 rounded-xl border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all">
+          <h2 className="text-4xl md:text-6xl lg:text-6xl font-bold mb-2 text-white">{stat.value}</h2>
+          <p className="text-xl md:text-2xl lg:text-4xl text-amber-100/80">{stat.label}</p>
+        </div>
+          ))}
+        </div>
       </section>
+
+      {/* 🔹 Call to Action */}
+      <section className="bg-stone-900 py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-coral-400 to-orange-400 bg-clip-text ">
+            Prêt à Transformer Votre Avenir ?
+          </h2>
+          <p className="text-amber-100/80 text-lg mb-8">
+            Rejoignez la nouvelle génération d'apprenants et donnez vie à vos ambitions
+          </p>
+          <button 
+            onClick={() => navigate('/formations')}
+            className="bg-gradient-to-r from-coral-500 to-orange-500 hover:from-orange-500 hover:to-coral-600 text-white px-12 py-5 rounded-xl font-bold shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
+          >
+            Commencer Mon Parcours
+          </button>
+        </div>
+      </section>
+
     </div>
   );
 }

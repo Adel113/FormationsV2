@@ -36,6 +36,8 @@ function AppRoutes() {
       <main className="flex-grow xs:m-4">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/apropos" element={<Apropos />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/tiktokformation" element={
               <PrivateRoute> 
@@ -51,13 +53,6 @@ function AppRoutes() {
           <Route path="/formation" element={
               <PrivateRoute>
                 <Formation />
-              </PrivateRoute>
-            }
-          />
-          <Route path="/apropos" element={<Apropos />} />
-          <Route path="/contact" element={
-              <PrivateRoute>
-                <Contact />
               </PrivateRoute>
             }
           />
