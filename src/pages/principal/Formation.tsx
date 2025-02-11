@@ -16,7 +16,6 @@ const formationsBySection: FormationProps[][] = [
     { title: "Formation TikTok 10k", description: "Maîtrisez TikTok, gagnez 10k abonnés et monétisez rapidement votre audience.", image: tiktok },
     { title: "IA", description: "Découvrez les meilleures IA et leurs usages concrets en entreprise.", image: ia },
     { title: "Formation TikTok 10k", description: "Maîtrisez TikTok, gagnez 10k abonnés et monétisez rapidement votre audience.", image: tiktok },
-    { title: "IA", description: "Découvrez les meilleures IA et leurs usages concrets en entreprise.", image: ia },
   ],
   [
     { title: "Dropshipping Shopify", description: "Créez et développez votre boutique Shopify en dropshipping rentable.", image: Shopify, comingSoon: true },
@@ -55,8 +54,8 @@ export default function FormationTimeline() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex justify-center p-10">
-      <div className="relative flex flex-col items-center w-full max-w-5xl gap-y-12">
+    <div className="min-h-screen bg-black flex justify-center p-10 ">
+      <div className="relative flex flex-col items-center w-full max-w-5xl gap-y-12 mt-20">
         
         {/* Timeline Line */}
         <div className="absolute left-2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-white"></div>
