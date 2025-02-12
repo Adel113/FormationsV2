@@ -2,10 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, Users, DollarSign } from 'lucide-react';
 import LogoApp from '../../images/logoApp.png';
+import slider1 from '../../images/tiktokbw.png';
+import slider2 from '../../images/shop.png';
 import imageAccueil from '../../images/AdobeStock_965828195_Preview.jpeg';
+import { img } from 'framer-motion/client';
 
 export default function Home() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-900 via-black to-stone-900 text-amber-50">
@@ -59,16 +62,16 @@ export default function Home() {
       </section>
 
       {/* 🔹 Timeline Section */}
-      <section className="min-h-screen flex flex-col items-center">
+      <section className="min-h-screen flex flex-col items-center px-4 sm:px-8 lg:px-16">
         <div className="max-w-7xl w-full rounded-2xl p-6 relative overflow-hidden">
-          <h1 className="text-6xl font-bold text-center mb-4 bg-gradient-to-r from-coral-400 to-orange-400 bg-clip-text">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-coral-400 to-orange-400 bg-clip-text">
             Notre Approche Innovante 🌟
           </h1>
-          <p className="text-4xl text-amber-100/80 text-center mb-6 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-2xl lg:text-4xl text-amber-100/80 text-center mb-6 max-w-2xl mx-auto">
             Un parcours pédagogique conçu pour maximiser votre potentiel créatif
           </p>
-          <div className="relative z-10 flex flex-col items-center">
-            <div className="absolute left-1/2 w-1 bg-gradient-to-b from-coral-500/80 to-orange-500/80 h-full transform -translate-x-1/2 rounded-full"></div>
+          <div className="relative z-10 flex flex-col items-start sm:items-center">
+            <div className="absolute left-4 sm:left-1/2 w-1 bg-gradient-to-b from-coral-500/80 to-orange-500/80 h-full sm:h-[90%] transform rounded-full"></div>
 
             {[{
               title: "Immersion Digitale",
@@ -85,25 +88,28 @@ export default function Home() {
             }].map((section, index) => (
               <div
                 key={index}
-                className={`relative flex items-center w-full mb-6 ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                className={`relative flex items-start sm:items-center w-full mb-6 flex-col sm:flex-row ${
+                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
-                <div className="w-10 h-10 bg-gradient-to-r from-coral-500 to-orange-500 rounded-full absolute left-1/2 transform -translate-x-1/2 z-20 shadow-xl border-2 border-amber-200/20"></div>
+                <div className="w-6 h-6 sm:w-10 sm:h-10 bg-gradient-to-r from-coral-500 to-orange-500 rounded-full absolute left-4 sm:left-1/2 transform -translate-x-1/2 z-20 shadow-xl border-2 border-amber-200/20"></div>
 
                 <div
-                  className={`w-5/12 p-6 rounded-xl shadow-lg hover:bg-gradient-to-r transition-all duration-300 ${section.color} ${
-                    index % 2 === 0 ? "ml-16" : "mr-16"
-                  } hover:border border-amber-500/30`}
+                  className={`w-11/12 sm:w-5/12 p-4 sm:p-6 rounded-xl shadow-lg hover:bg-gradient-to-r transition-all duration-300 ${section.color} ${
+                    index % 2 === 0 ? "sm:ml-16" : "sm:mr-16"
+                  } hover:border border-amber-500/30 text-left sm:text-left ml-12 sm:ml-0`}
                 >
-                  <h2 className="text-6xl font-semibold text-amber-100">{section.title}</h2>
-                  <p className="text-4xl text-amber-100/70 mt-2">{section.text}</p>
+                  <h2 className="text-2xl sm:text-4xl lg:text-6xl font-semibold text-amber-100">{section.title}</h2>
+                  <p className="text-base sm:text-xl lg:text-4xl text-amber-100/70 mt-2">{section.text}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+
+
 
 
       {/* 🔹 Statistics Section */}
@@ -133,6 +139,44 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+       {/* 🔹 Image Slider */}
+       <section className="w-full overflow-hidden bg-white py-10">
+          <div className="relative w-full">
+            <div className="flex overflow-hidden w-full">
+              <div className="flex animate-scroll whitespace-nowrap space-x-4 px-4 sm:px-8 lg:px-16">
+                {/* Tableau avec tailles personnalisées */}
+                {[
+                  { src: slider1, width: "w-72" }, // 18rem (≈ 288px)
+                  { src: slider2, width: "w-120" }, // 20rem (≈ 320px)
+                  { src: "/img3.jpg", width: "w-96" }, // 24rem (≈ 384px)
+                  { src: "/img4.jpg", width: "w-64" }, // 16rem (≈ 256px)
+                  { src: slider1, width: "w-72" },
+                  { src: slider2, width: "w-80" },
+                  { src: "/img3.jpg", width: "w-96" },
+                  { src: "/img4.jpg", width: "w-64" }
+                ].map((item, index) => (
+                  <div key={index} className={`flex-shrink-0 ${item.width}`}>
+                    <img src={item.src} alt={`Slide ${index + 1}`} className="w-full h-40 sm:h-56 lg:h-64 object-cover rounded-xl shadow-lg" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <style>{`
+            @keyframes scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-scroll {
+              display: flex;
+              animation: scroll 15s linear infinite;
+            }
+          `}</style>
+        </section>
+
+
 
       {/* 🔹 Call to Action */}
       <section className="bg-stone-900 py-20 text-center">
