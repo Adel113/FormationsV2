@@ -19,18 +19,18 @@ export default function TiktokFormation() {
   const [showVideoGuide, setShowVideoGuide] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-stone-900 via-black to-stone-900">
 
       {/* Presentation Section */}
-      <div className="relative bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
-        <div className="container mx-auto px-4 py-24 md:py-0 relative z-10">
+      <div className="relative bg-gradient-to-b from-orange-400 to-orange-400 text-white py-20">
+        <div className="container mx-auto px-4 py-24 md:py-0 relative z-10 mt-20 mb-20">
               <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Left Side: Company Info */}
                   <div className="w-full md:w-1/2 mb-12 md:mb-0">
                       <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                           Innovate.<br />Transform.<br />Succeed.
                       </h1>
-                      <p className="text-xl mb-8 text-gray-300">Empowering businesses with cutting-edge solutions for a digital future. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sunt amet dolore aliquam vitae alias possimus nesciunt? Cupiditate, architecto blanditiis illo necessitatibus ex commodi ut, deserunt eaque, possimus tempore harum!</p>
+                      <p className="text-xl mb-8 text-white">Empowering businesses with cutting-edge solutions for a digital future. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sunt amet dolore aliquam vitae alias possimus nesciunt? Cupiditate, architecto blanditiis illo necessitatibus ex commodi ut, deserunt eaque, possimus tempore harum!</p>
                       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                           {/*<a href="#" className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition duration-300 text-center">Get Started</a>
                           <a href="#" className="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-900 transition duration-300 text-center">Learn More</a>*/}
@@ -59,11 +59,11 @@ export default function TiktokFormation() {
                   </div>
               </div>
           </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-900 to-transparent"></div>
       </div> 
 
       {/* Objectif section  */}
-      <section className="py-20">
+      <section className="py-20 text-white">
         <div className="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
             <div
                 className="lg:flex-grow mt-5 md:mt-0   md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -100,7 +100,7 @@ export default function TiktokFormation() {
       </section>
 
       {/*Création de compte */}
-      <section className="py-20">
+      <section className="py-20 text-white">
         <div className="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
           
             {/* Contenu texte */}
@@ -141,7 +141,7 @@ export default function TiktokFormation() {
 
 
       {/* Objectif section  */}
-      <section className="py-20">
+      <section className="py-20 text-white">
         <div className="container mx-auto flex md:px-24 md:py-10 md:flex-row flex-col items-center">
             <div
                 className="lg:flex-grow mt-5 md:mt-0   md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -193,7 +193,7 @@ export default function TiktokFormation() {
       </section>
 
       {/* Pourquoi ces niches Section */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-20 text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">
             Pourquoi ces niches Section
@@ -203,7 +203,7 @@ export default function TiktokFormation() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Colonne 1 */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all">
               <div className="p-4">
                 <div className="flex justify-center mb-4">
                   <img className="w-40 h-40 object-cover p-1" alt="Curiosité icone" src={CuriositeImage} />
@@ -215,7 +215,8 @@ export default function TiktokFormation() {
               </div>
             </div>
             {/* Colonne 2 */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all">
+
               <div className="p-4">
                 <div className="flex justify-center mb-4">
                   <img
@@ -231,7 +232,8 @@ export default function TiktokFormation() {
               </div>
             </div>
             {/* Colonne 3 */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all">
+
               <div className="p-4">
                 <div className="flex justify-center mb-4">
                   <img
@@ -257,9 +259,9 @@ export default function TiktokFormation() {
 
       <section className="relative">
         {/* Dégradé en haut */}
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-purple-50 to-transparent z-10"></div>
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-stone-900 to-transparent z-10"></div>
 
-        <div className="relative bg-gradient-to-r from-purple-600 to-pink-600 py-20">
+        <div className="relative bg-gradient-to-r from-orange-400 to-orange-400 py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">
               Inspirez-vous avec ces exemples concrets
@@ -337,7 +339,7 @@ export default function TiktokFormation() {
         </div>
 
         {/* Dégradé en bas */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-purple-50 to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-stone-900 to-transparent z-10"></div>
       </section>
 
       {/* Strategies Section */}
@@ -345,33 +347,33 @@ export default function TiktokFormation() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">Stratégies Gagnantes</h1>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
               <Video className="h-10 w-10 text-pink-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Créativité</h3>
-              <p className="text-gray-600 text-xl">Développez un contenu unique qui se démarque et captive votre audience</p>
+              <h3 className="text-white text-xl font-semibold mb-3">Créativité</h3>
+              <p className="text-gray-400 text-xl">Développez un contenu unique qui se démarque et captive votre audience</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
               <Target className="h-10 w-10 text-pink-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Discipline</h3>
-              <p className="text-gray-600 text-xl">Maintenez une régularité dans vos publications pour fidéliser vos abonnés</p>
+              <h3 className="text-white text-xl font-semibold mb-3">Discipline</h3>
+              <p className="text-gray-400 text-xl">Maintenez une régularité dans vos publications pour fidéliser vos abonnés</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
               <Clock className="h-10 w-10 text-pink-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Timing</h3>
-              <p className="text-gray-600 text-xl">Publiez au bon moment pour maximiser votre visibilité</p>
+              <h3 className="text-white text-xl font-semibold mb-3">Timing</h3>
+              <p className="text-gray-400 text-xl">Publiez au bon moment pour maximiser votre visibilité</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Video Creation Guide Section */}
-      <section className="bg-white py-20">
+      <section className="py-20 text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">Guide Complet ASMR Cuisine</h1>
           <div className="max-w-4xl mx-auto">
             <button
               onClick={() => setShowVideoGuide(!showVideoGuide)}
-              className="flex items-center justify-between w-full bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-colors mb-6"
+              className="text-black bg-orange-400 flex items-center justify-between w-full p-4 rounded-lg hover:bg-white transition-colors mb-6"
             >
               <Eye className="h-8 w-8 text-pink-600" />
               <span className="font-semibold">Voir le Guide Détaillé</span>
@@ -379,7 +381,7 @@ export default function TiktokFormation() {
             </button>
             
             {showVideoGuide && (
-              <div className="bg-white rounded-lg shadow-sm p-6 space-y-12">
+              <div className="rounded-lg shadow-sm p-6 space-y-12">
                 {/* Étape 1 */}
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -387,19 +389,19 @@ export default function TiktokFormation() {
                     <h3 className="text-2xl font-semibold">Étape 1 : Trouver une vidéo prête</h3>
                   </div>
                   <div className="ml-11 space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Accéder à YouTube ou TikTok</h4>
-                      <p className="text-gray-600 text-xl">Utilisez des mots-clés spécifiques comme :</p>
-                      <ul className="list-disc ml-5 mt-2 text-gray-600">
+                      <p className="text-gray-400 text-xl">Utilisez des mots-clés spécifiques comme :</p>
+                      <ul className="list-disc ml-5 mt-2 text-gray-400">
                         <li className=' text-xl'>"ASMR cooking"</li>
                         <li className=' text-xl'>"Cuisine en forêt"</li>
                         <li className=' text-xl'>"Outdoor cooking ASMR"</li>
                       </ul>
                       <ImageGallery images={[t1]} />
                     </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Critères de sélection</h4>
-                      <ul className="list-disc ml-5 text-gray-600">
+                      <ul className="list-disc ml-5 text-gray-400">
                         <li className=' text-xl'>Résolution minimale de 1080p</li>
                         <li className=' text-xl'>Son clair et distinct</li>
                         <li className=' text-xl'>Bonne luminosité</li>
@@ -412,13 +414,13 @@ export default function TiktokFormation() {
                 {/* Étape 2 */}
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Download className="h-8 w-8 text-pink-600" />
+                    <Download className="h-8 w-8 text-pink-400" />
                     <h3 className="text-2xl font-semibold">Étape 2 : Télécharger la vidéo</h3>
                   </div>
                   <div className="ml-11 space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Depuis YouTube</h4>
-                      <ol className="list-decimal ml-5 text-gray-600 space-y-2">
+                      <ol className="list-decimal ml-5 text-gray-400 space-y-2">
                         <li className=' text-xl'>Copiez l'URL de la vidéo YouTube</li>
                         <li className=' text-xl'>Accédez à y2meta.tube</li>
                         <li className=' text-xl'>Collez l'URL et sélectionnez la qualité 1080p</li>
@@ -427,9 +429,9 @@ export default function TiktokFormation() {
                     </div>
                     <ImageGallery images={[t1,t2,t3,t4]} />
                     
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Depuis TikTok</h4>
-                      <ol className="list-decimal ml-5 text-gray-600 space-y-2">
+                      <ol className="list-decimal ml-5 text-gray-400 space-y-2">
                         <li className=' text-xl'>Copiez l'URL de la vidéo TikTok</li>
                         <li className=' text-xl'>Visitez SnapTik.app</li>
                         <li className=' text-xl'>Collez l'URL et téléchargez en HD</li>
@@ -441,21 +443,21 @@ export default function TiktokFormation() {
                 {/* Étape 3 */}
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <PlaySquare className="h-8 w-8 text-pink-600" />
+                    <PlaySquare className="h-8 w-8 text-pink-400" />
                     <h3 className="text-2xl font-semibold">Étape 3 : Analyser la vidéo</h3>
                   </div>
                   <div className="ml-11 space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Observer la vidéo</h4>
-                      <ul className="list-disc ml-5 text-gray-600">
+                      <ul className="list-disc ml-5 text-gray-400">
                         <li className=' text-xl'>Identifiez les étapes clés de la recette</li>
                         <li className=' text-xl'>Notez les sons importants (découpe, cuisson, etc.)</li>
                         <li className=' text-xl'>Repérez les moments de transition</li>
                       </ul>
                     </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Créer le script avec ChatGPT</h4>
-                      <div className="bg-white p-3 rounded border border-gray-200 text-gray-600 mt-2 text-xl">
+                      <div className=" p-3 rounded border border-gray-200 text-gray-400 mt-2 mb-4 text-xl">
                         "Génère un script de recette pour une vidéo ASMR cuisine, comprenant les étapes suivantes : découpe de légumes, cuisson dans une poêle, bruits de cuisson, présentation du plat final."
                       </div>
                     <ImageGallery images={[chatgpt1,chatgpt2]} />
@@ -471,9 +473,9 @@ export default function TiktokFormation() {
                     <h3 className="text-2xl font-semibold">Étape 4 : Créer la voix off</h3>
                   </div>
                   <div className="ml-11 space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className=" p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Utiliser ElevenLabs</h4>
-                      <ol className="list-decimal ml-5 text-gray-600 space-y-2">
+                      <ol className="list-decimal ml-5 text-gray-400 space-y-2">
                         <li className=' text-xl' >Créez un compte sur ElevenLabs</li>
                         <li className=' text-xl' >Choisissez une voix calme et naturelle</li>
                         <li className=' text-xl' >Collez votre script</li>
@@ -492,9 +494,9 @@ export default function TiktokFormation() {
                     <h3 className="text-2xl font-semibold">Étape 5 : Montage sur CapCut</h3>
                   </div>
                   <div className="ml-11 space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Montage vidéo</h4>
-                      <ol className="list-decimal ml-5 text-gray-600 space-y-2">
+                      <ol className="list-decimal ml-5 text-gray-400 space-y-2">
                         <li className=' text-xl' >Créez un nouveau projet</li>
                         <li className=' text-xl' >Importez la vidéo et l'audio</li>
                         <li className=' text-xl' >Synchronisez l'audio avec les actions</li>
@@ -508,13 +510,13 @@ export default function TiktokFormation() {
                 {/* Étape 6 */}
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Subtitles className="h-8 w-8 text-pink-600" />
+                    <Subtitles className="h-8 w-8 text-pink-400" />
                     <h3 className="text-2xl font-semibold">Étape 6 : Ajouter les sous-titres</h3>
                   </div>
                   <div className="ml-11 space-y-4">
-                    <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="p-4 rounded-lg">
                       <h4 className="font-semibold mb-2">Sous-titres avec CapCut</h4>
-                      <ol className="list-decimal ml-5 text-gray-600 space-y-2">
+                      <ol className="list-decimal ml-5 text-gray-400 space-y-2">
                         <li className=' text-xl' >Utilisez la fonction "Sous-titres automatiques"</li>
                         <li className=' text-xl' >Vérifiez et corrigez le texte généré</li>
                         <li className=' text-xl' >Personnalisez la police et la taille</li>
@@ -546,53 +548,58 @@ export default function TiktokFormation() {
       {/* Bonus Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-12">Bonus : Prompts ChatGPT</h1>
+          <h1 className="text-white text-4xl font-bold text-center mb-12">Bonus : Prompts ChatGPT</h1>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">ASMR Cuisine</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+              <h3 className="text-white text-xl font-semibold mb-4">ASMR Cuisine</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Écris un texte court et apaisant pour accompagner une vidéo ASMR de préparation de [plat]."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Jeux vidéo</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+              <h3 className=" text-white text-xl font-semibold mb-4">Jeux vidéo</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Rédige un script captivant pour une vidéo de gameplay sur [nom du jeu], avec des explications et des anecdotes intéressantes."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Quiz</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+              <h3 className="text-white text-xl font-semibold mb-4">Quiz</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Crée un quiz interactif de 10 questions sur [thème], avec 4 choix de réponses et des explications après chaque réponse."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Histoire</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+
+              <h3 className="text-white text-xl font-semibold mb-4">Histoire</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Raconte une histoire fascinante de 60 secondes sur un événement historique peu connu."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Culture générale</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+
+              <h3 className="text-white text-xl font-semibold mb-4">Culture générale</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Explique un concept de culture générale en 2 minutes de manière simple et engageante."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Politique et actualités</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+
+              <h3 className="text-white text-xl font-semibold mb-4">Politique et actualités</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Analyse un sujet d'actualité politique en expliquant les enjeux, les acteurs impliqués et les conséquences possibles."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Vues de paysages</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+
+              <h3 className="text-white text-xl font-semibold mb-4">Vues de paysages</h3>
+              <p className="text-gray-400  p-4 rounded-lg text-xl">
                 "Écris un texte poétique et immersif pour accompagner une vidéo de paysages magnifiques."
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Science et Mystères</h3>
-              <p className="text-gray-600 bg-gray-50 p-4 rounded-lg text-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg bg-stone-800/30 border border-amber-900/30 hover:border-amber-800/50 backdrop-blur-sm transform hover:scale-105 transition-all p-6">
+
+              <h3 className="text-white text-xl font-semibold mb-4">Science et Mystères</h3>
+              <p className="text-gray-400 p-4 rounded-lg text-xl">
                 "Explique un phénomène scientifique mystérieux ou une théorie fascinante en 3 minutes."
               </p>
             </div>
