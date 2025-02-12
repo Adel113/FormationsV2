@@ -5,7 +5,6 @@ import LogoApp from '../../images/logoApp.png';
 import slider1 from '../../images/tiktokbw.png';
 import slider2 from '../../images/shop.png';
 import imageAccueil from '../../images/AdobeStock_965828195_Preview.jpeg';
-import { img } from 'framer-motion/client';
 
 export default function Home() {
   const navigate = useNavigate(); 
