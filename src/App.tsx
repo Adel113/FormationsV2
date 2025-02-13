@@ -9,10 +9,10 @@ import LienIa from './pages/formations/LienIa';
 import Contact from './pages/principal/Contact';
 import Apropos from './pages/principal/apropos';
 import Login from './pages/principal/Login';
-import { AuthProvider } from './contexts/AuthContext';
-import { useAuth } from './contexts/AuthContext';
+import { AuthProvider,useAuth } from './contexts/AuthContext';
 
-function PrivateRoute({ children }: { children: React.ReactNode }) {
+
+function PrivateRoute({ children }: { readonly children: React.ReactNode }) {
   const { user, loading } = useAuth();
 
   // Afficher un loader pendant que l'état d'authentification est en cours de vérification
