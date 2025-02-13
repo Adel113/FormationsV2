@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
         <loc>https://formationv2pro.netlify.app/</loc>
-        <lastmod>2025-01-30</lastmod>
+        <lastmod>2025-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://formationv2pro.netlify.app/formation</loc>
-        <lastmod>2025-01-30</lastmod>
+        <lastmod>2025-02-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://formationv2pro.netlify.app/contact</loc>
-        <lastmod>2025-01-30</lastmod>
+        <lastmod>2025-02-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/mentions-legales</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/faq</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/blog</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/blog/:slug</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/tiktokformation</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/LienIa</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://formationv2pro.netlify.app/apropos</loc>
+        <lastmod>2025-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
