@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
-import { Lock } from 'lucide-react';
+import { Lock, X } from 'lucide-react';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showCodeModal, setShowCodeModal] = useState(false);
+  const [code, setCode] = useState('');
+  const [modalError, setModalError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,12 +23,67 @@ export default function Login() {
     }
   };
 
-  const handleBuyAccount = () => {
-    window.location.href = 'https://votre-site-de-vente.com';
-  };
 
+    const handleCodeSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      
+      if (code === import.meta.env.VITE_ACCESS_CODE) {
+        const expirationTime = Date.now() + 300000; 
+        sessionStorage.setItem('signup_access', 'true');
+        sessionStorage.setItem('signup_expiration', expirationTime.toString());
+        navigate('/signup');
+      } else {
+        setModalError('Code d\'accès incorrect');
+      }
+    };
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-20">
+      {/* Modal pour le code d'accès */}
+      {showCodeModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative">
+            <button
+              onClick={() => setShowCodeModal(false)}
+              className="absolute top-4 right-4 p-1 hover:bg-gray-100 rounded-full"
+            >
+              <X className="h-6 w-6 text-gray-600" />
+            </button>
+            
+            <h3 className="text-xl font-bold mb-6">Code d'accès requis</h3>
+            
+            <form onSubmit={handleCodeSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  Code d'accès
+                </label>
+                <input
+                  type="password"
+                  value={code}
+                  onChange={(e) => {
+                    setCode(e.target.value);
+                    setModalError(''); // Reset l'erreur quand on tape
+                  }}
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-pink-600"
+                  placeholder="Entrez le code fourni"
+                />
+              </div>
+              
+              {modalError && (
+                <p className="text-red-500 text-sm">{modalError}</p>
+              )}
+
+              <button
+                type="submit"
+                className="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition"
+              >
+                Vérifier le code
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Formulaire de connexion principal */}
       <div className="container mx-auto px-4">
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
           <div className="p-8">
@@ -76,10 +134,10 @@ export default function Login() {
             </form>
             <div className="mt-6">
               <button
-                onClick={handleBuyAccount}
+                onClick={() => setShowCodeModal(true)}
                 className="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
               >
-                Acheter un compte
+                Créer un compte
               </button>
             </div>
           </div>

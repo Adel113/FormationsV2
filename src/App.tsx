@@ -9,6 +9,7 @@ import LienIa from './pages/formations/LienIa';
 import Contact from './pages/principal/Contact';
 import Apropos from './pages/principal/apropos';
 import Login from './pages/principal/Login';
+import SignUp from './pages/principal/SignUp';
 import { AuthProvider,useAuth } from './contexts/AuthContext';
 
 
@@ -29,6 +30,16 @@ function PrivateRoute({ children }: { readonly children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+function SignupRoute({ children }: { readonly children: React.ReactNode }) {
+  const hasAccess = sessionStorage.getItem('signup_access') === 'true';
+
+  if (!hasAccess) {
+    return <Navigate to="/login" />;
+  }
+
+  return <>{children}</>;
+}
+
 function AppRoutes() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -39,6 +50,14 @@ function AppRoutes() {
           <Route path="/apropos" element={<Apropos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route 
+            path="/signup" 
+            element={
+              <SignupRoute>
+                <SignUp />
+              </SignupRoute>
+            } 
+          />
           <Route path="/tiktokformation" element={
               <PrivateRoute> 
                 <TiktokFormation />

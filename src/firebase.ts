@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAlKESWw9TpgIzxcRDr-TIl15CX6QPADow",
-  authDomain: "formationtiktok-eac6e.firebaseapp.com",
-  projectId: "formationtiktok-eac6e",
-  storageBucket: "formationtiktok-eac6e.firebasestorage.app",
-  messagingSenderId: "1083673281264",
-  appId: "1:1083673281264:web:577a8dbed34ade9d403835",
-  measurementId: "G-PWG0CYS9XC"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
