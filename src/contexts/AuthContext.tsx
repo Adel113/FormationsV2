@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, signOut } from 'firebase/auth';
+import { User, signOut, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   logout: () => Promise<void>;
+  signUp: (email: string, password: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -38,10 +39,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     navigate('/login');
   };
 
+  const signUp = async (email: string, password: string) => {
+    await createUserWithEmailAndPassword(auth, email, password);
+  };
+
   const value = {
     user,
     loading,
-    logout
+    logout,
+    signUp
   };
 
   return (
@@ -50,3 +56,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     </AuthContext.Provider>
   );
 }
+
+// Créez un nouveau hook useSignupAccess dans AuthContext.ts
+export const useSignupAccess = () => {
+  const [hasAccess, setHasAccess] = useState(false);
+
+  useEffect(() => {
+    const checkAccess = () => {
+      const access = sessionStorage.getItem('signup_access');
+      const expiration = sessionStorage.getItem('signup_expiration');
+      
+      if (access === 'true' && expiration && Date.now() < parseInt(expiration)) {
+        setHasAccess(true);
+      } else {
+        sessionStorage.removeItem('signup_access');
+        sessionStorage.removeItem('signup_expiration');
+        setHasAccess(false);
+      }
+    };
+
+    checkAccess();
+  }, []);
+
+  return hasAccess;
+};
