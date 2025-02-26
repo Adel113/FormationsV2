@@ -1,10 +1,69 @@
 import React from 'react';
+import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import LogoApp from '../../images/etudiant.jpg';
 
 export default function apropos() {
 
   const navigate = useNavigate(); 
+
+  const testimonials = [
+    {
+      name: "Alex Dupont",
+      text: "Une formation exceptionnelle qui m'a permis d'acquérir des compétences solides et concrètes.",
+      job: "Développeur Web",
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    {
+      name: "Sophie Morel",
+      text: "Grâce à cette formation, j'ai pu décrocher mon emploi de rêve en seulement quelques mois.",
+      job: "Cheffe de projet digital",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+    },
+    {
+      name: "Julien Lambert",
+      text: "Un accompagnement sur-mesure et des formateurs passionnés, je recommande vivement !",
+      job: "Consultant IT",
+      image: "https://randomuser.me/api/portraits/men/50.jpg",
+    },
+  ];
+
+  const challenges = [
+    {
+      year: "2025",
+      title: "Rassembler un maximum de personnes",
+      description:
+        "Notre objectif cette année : toucher le plus grand nombre et faire grandir notre communauté avec des contenus toujours plus innovants.",
+    },
+    {
+      year: "2026",
+      title: "Lancement de nouvelles formations",
+      description:
+        "Nous développons de nouveaux programmes pour répondre aux besoins du marché et aux évolutions technologiques.",
+    },
+    {
+      year: "2027",
+      title: "Partenariats stratégiques",
+      description:
+        "Nous établissons des collaborations avec des entreprises et institutions pour offrir plus d'opportunités à nos apprenants.",
+    },
+    {
+      year: "2028",
+      title: "Technologies immersives",
+      description:
+        "Nous intégrons l’IA et la réalité virtuelle dans nos formations pour une expérience d’apprentissage révolutionnaire.",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
 
   return (
     <div className="min-h-screen bg-black text-gray-900 pt-10 font-sans">
@@ -96,6 +155,62 @@ export default function apropos() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="bg-black text-white py-20 text-center">
+      <div className="container mx-auto px-6 max-w-4xl">
+        <h2 className="text-4xl font-bold mb-12 text-orange-500">Ils en parlent mieux que nous</h2>
+
+        <div className="relative flex flex-col items-center">
+          {/* Témoignage affiché */}
+          <div className="bg-gray-900 p-8 rounded-2xl shadow-lg text-center flex flex-col items-center transition-transform duration-300 w-full max-w-lg">
+            <img
+              src={testimonials[currentIndex].image}
+              alt={testimonials[currentIndex].name}
+              className="w-20 h-20 rounded-full border-4 border-orange-500 mb-4"
+            />
+            <p className="text-lg italic text-gray-300 mb-4">"{testimonials[currentIndex].text}"</p>
+            <h3 className="text-xl font-semibold text-orange-400">{testimonials[currentIndex].name}</h3>
+            <p className="text-sm text-gray-400">{testimonials[currentIndex].job}</p>
+          </div>
+
+          {/* Boutons de navigation */}
+          <div className="flex mt-6 space-x-4">
+            <button
+              onClick={prevTestimonial}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full shadow-md transition-all"
+            >
+              ←
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full shadow-md transition-all"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Challenges Section */}
+    <section className="bg-orange-500 text-white py-20">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <h2 className="text-4xl font-bold text-center mb-12">Nos Prochains Défis & Perspectives</h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {challenges.map((challenge, index) => (
+            <div
+              key={index}
+              className="bg-gray-900 p-8 rounded-2xl shadow-lg transform transition-all hover:scale-105"
+            >
+              <h3 className="text-3xl font-bold text-orange-300">{challenge.year}</h3>
+              <h4 className="text-xl font-semibold mt-3">{challenge.title}</h4>
+              <p className="text-gray-300 mt-3">{challenge.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
     
       {/* Call to Action */}
       <section className="bg-black text-white py-20 text-center">
