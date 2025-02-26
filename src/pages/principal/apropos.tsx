@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import LogoApp from '../../images/etudiant.jpg';
 
-export default function apropos() {
+export default function Apropos() {
 
   const navigate = useNavigate(); 
 
