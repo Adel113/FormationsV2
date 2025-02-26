@@ -36,8 +36,13 @@ export default function Login() {
         setModalError('Code d\'accès incorrect');
       }
     };
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-20">
+
+
       {/* Modal pour le code d'accès */}
       {showCodeModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -78,6 +83,13 @@ export default function Login() {
               >
                 Vérifier le code
               </button>
+                <button
+                type="button"
+                className="w-full bg-pink-300 text-black py-2 rounded-lg hover:bg-pink-100 transition"
+                onClick={() => window.location.href = 'https://shop.beacons.ai/formationsv2/946843ca-83f0-4fa7-80c5-2c9c7d8abefd'}
+                >
+                Acheter le code
+                </button>
             </form>
           </div>
         </div>
