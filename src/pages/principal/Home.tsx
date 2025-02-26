@@ -71,34 +71,62 @@ export default function Home() {
       {/* 🔹 Image Slider */}
       <section className="w-full overflow-hidden bg-orange-400 py-10">
         <div className="relative w-full">
-          <div className="flex overflow-hidden w-full">
-          <div className="flex animate-scroll whitespace-nowrap space-x-4 px-4 sm:px-8 lg:px-16">
-            {[
-              { slide: slider1, key: 'slider1' },
-              { slide: slider2, key: 'slider2' },
-              { slide: slider3, key: 'slider3' },
-              { slide: slider4, key: 'slider4' },
-              { slide: slider2, key: 'slider123' },
-              { slide: slider1, key: 'slider43' },
-              { slide: slider2, key: 'slider84' },
-              { slide: slider1, key: 'slider95' },
-            ].map((item) => (
-              <div key={item.key} className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12">
-              <img src={item.slide} alt={`Slide ${item.key}`} className="w-full h-28 object-cover shadow-lg" />
-              </div>
-            ))}
-          </div>
+          <div className="flex animate-scroll w-full">
+            <div className="flex whitespace-nowrap space-x-4 px-4 sm:px-8 lg:px-16">
+              {[
+                { slide: slider1, key: "slider1" },
+                { slide: slider2, key: "slider2" },
+                { slide: slider3, key: "slider3" },
+                { slide: slider4, key: "slider4" },
+                { slide: slider2, key: "slider123" },
+                { slide: slider1, key: "slider43" },
+                { slide: slider2, key: "slider84" },
+                { slide: slider1, key: "slider95" },
+              ].map((item) => (
+                <div key={item.key} className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12">
+                  <img
+                    src={item.slide}
+                    alt={`Slide ${item.key}`}
+                    className="w-full h-28 object-cover shadow-lg"
+                  />
+                </div>
+              ))}
+              {/* Duplicate the slides for continuous effect */}
+              {[
+                { slide: slider1, key: "slider1" },
+                { slide: slider2, key: "slider2" },
+                { slide: slider3, key: "slider3" },
+                { slide: slider4, key: "slider4" },
+                { slide: slider2, key: "slider123" },
+                { slide: slider1, key: "slider43" },
+                { slide: slider2, key: "slider84" },
+                { slide: slider1, key: "slider95" },
+              ].map((item) => (
+                <div key={item.key + "-duplicate"} className="flex-shrink-0 mx-4 sm:mx-8 lg:mx-12">
+                  <img
+                    src={item.slide}
+                    alt={`Slide ${item.key} duplicate`}
+                    className="w-full h-28 object-cover shadow-lg"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         <style>{`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
           .animate-scroll {
-              display: flex;
-              animation: scroll 3s linear infinite;
+            display: flex;
+            animation: scroll 15s linear infinite;
+          }
+
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
           }
         `}</style>
       </section>
