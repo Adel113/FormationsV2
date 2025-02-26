@@ -50,9 +50,6 @@ export default function Contact() {
       </div>
 
       {/* Contact Info Section */}
-      {/* Contact Info Section */}
-      
-      
       <section className="py-20 flex flex-col bg-black items-center px-6 sm:px-12 lg:px-24">
         <div className="max-w-7xl w-full rounded-2xl p-10 bg-orange-100">
           <h1 className="text-5xl font-bold text-center mb-6 text-orange-600">Informations de Contact</h1>
