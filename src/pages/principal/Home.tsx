@@ -227,7 +227,7 @@ export default function Home() {
             Rejoignez la nouvelle génération d'apprenants et donnez vie à vos ambitions
           </p>
           <button 
-            onClick={() => navigate('/formations')}
+            onClick={() => navigate('/login')}
             className="bg-gradient-to-r from-coral-500 to-orange-500 hover:from-orange-500 hover:to-coral-600 text-white px-12 py-5 rounded-xl font-bold shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:scale-105"
           >
             Commencer Mon Parcours
