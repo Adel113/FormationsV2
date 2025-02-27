@@ -78,7 +78,7 @@ export default function Apropos() {
                 Découvrez l’histoire d’une entreprise née d’une vision ambitieuse : transformer l’apprentissage et façonner l’avenir.
               </p>
               <button 
-                onClick={() => navigate('/notre-histoire')}
+                onClick={() => navigate('/login')}
                 className="bg-gradient-to-r from-coral-500 to-orange-500 hover:from-orange-500 hover:to-coral-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-orange-500/40 hover:scale-105 duration-300 group"
               >
                 En savoir plus
@@ -218,7 +218,7 @@ export default function Apropos() {
         <p className="text-lg opacity-80 max-w-3xl mx-auto mb-6">
           Rejoignez une communauté d’apprenants et de passionnés, et construisons ensemble l’avenir de la formation.
         </p>
-        <button onClick={() => navigate('/notre-histoire')} className="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-semibold transition-all">
+        <button onClick={() => navigate('/login')} className="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-semibold transition-all">
           Découvrir Notre Histoire
         </button>
       </section>

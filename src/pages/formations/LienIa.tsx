@@ -237,7 +237,7 @@ const Ia = () => {
   const categories = [...new Set(aiTools.map(tool => tool.category))];
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-4 py-10 pt-28">
       <h1 className="text-4xl font-bold mb-6 text-center">Les meilleures IA pour booster ton contenu TikTok</h1>
       
       {categories.map((category) => (
