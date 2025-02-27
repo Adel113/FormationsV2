@@ -47,49 +47,61 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h2 className="text-2xl font-bold mb-4">Création de compte</h2>
-      {error && <p className="text-red-500 mb-4">{error}</p>}
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-sm">
-        {/* Les champs du formulaire restent identiques */}
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700">Email:</label>
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="mt-1 p-2 w-full border rounded"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="password" className="block text-gray-700">Mot de passe:</label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="mt-1 p-2 w-full border rounded"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="confirmPassword" className="block text-gray-700">Confirmer le mot de passe:</label>
-          <input
-            id="confirmPassword"
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            className="mt-1 p-2 w-full border rounded"
-          />
-        </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-          Créer un compte
-        </button>
-      </form>
+<div className="flex flex-col items-center justify-center min-h-screen bg-black p-6">
+  <h2 className="text-3xl font-extrabold text-white mb-6">Création de compte</h2>
+  
+  {error && <p className="text-red-500 bg-red-800 bg-opacity-30 p-3 rounded-lg mb-4">{error}</p>}
+
+  <form onSubmit={handleSubmit} className="bg-white bg-opacity-10 border border-orange-500 p-6 rounded-2xl shadow-xl w-full max-w-sm backdrop-blur-lg">
+    {/* Champ Email */}
+    <div className="mb-4">
+      <label htmlFor="email" className="block text-orange-500 font-medium">Email:</label>
+      <input
+        id="email"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        className="mt-2 p-3 w-full border border-orange-500 bg-black text-white rounded-lg focus:ring-2 focus:ring-orange-500"
+      />
     </div>
+
+    {/* Champ Mot de passe */}
+    <div className="mb-4">
+      <label htmlFor="password" className="block text-orange-500 font-medium">Mot de passe:</label>
+      <input
+        id="password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+        className="mt-2 p-3 w-full border border-orange-500 bg-black text-white rounded-lg focus:ring-2 focus:ring-orange-500"
+      />
+    </div>
+
+    {/* Champ Confirmation du mot de passe */}
+    <div className="mb-6">
+      <label htmlFor="confirmPassword" className="block text-orange-500 font-medium">Confirmer le mot de passe:</label>
+      <input
+        id="confirmPassword"
+        type="password"
+        value={confirmPassword}
+        onChange={(e) => setConfirmPassword(e.target.value)}
+        required
+        className="mt-2 p-3 w-full border border-orange-500 bg-black text-white rounded-lg focus:ring-2 focus:ring-orange-500"
+      />
+    </div>
+
+    {/* Bouton de soumission */}
+    <button 
+      type="submit" 
+      className="w-full bg-orange-500 text-black py-3 rounded-xl font-semibold hover:bg-orange-400 transition-all"
+    >
+      Créer un compte
+    </button>
+  </form>
+</div>
+
   );
 };
 
